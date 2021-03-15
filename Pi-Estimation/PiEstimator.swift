@@ -13,7 +13,7 @@ func **(lhs: Float, rhs: Float) -> Float {
     return pow(lhs, rhs)
 }
 
-final class PiEstimator {
+final class Pi {
     
     func isCoPrime(_ a: Int,_ b: Int) -> Bool {
         return 1 == isCoPrimeHelper(a, b, a / b, a % b)
@@ -26,7 +26,7 @@ final class PiEstimator {
         return isCoPrimeHelper(b, r, b / r, b % r)
     }
     
-    func simulation(_ trials: Int = 1000) {
+    func estimate(_ trials: Int = 1000) -> Float {
         
         var x: Float = 0 // number of coprimes found
 
@@ -41,10 +41,7 @@ final class PiEstimator {
             }
         }
 
-        x = x / Float(trials)
-        
-        let pi = (6.0 / x)**0.5
-        print("Estimate of Pi is:",pi)
+        return (Float(6 * trials) / x)**0.5
     }
     
 }

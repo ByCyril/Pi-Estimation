@@ -7,9 +7,10 @@
 
 import Foundation
 
-PiEstimator().simulation()
-PiEstimator().simulation()
-PiEstimator().simulation()
-PiEstimator().simulation()
-PiEstimator().simulation(5000)
-PiEstimator().simulation(50000)
+print("Estimate of Pi is:", Pi().estimate())
+print("Estimate of Pi is:", Pi().estimate())
+print("Estimate of Pi is:", Pi().estimate())
+print("Estimate of Pi is:", Pi().estimate())
+print("Estimate of Pi is:", Pi().estimate(5))
+print("Estimate of Pi is:", Pi().estimate(500))
+print("Estimate of Pi is:", Pi().estimate(5000))
