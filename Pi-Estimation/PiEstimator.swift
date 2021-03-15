@@ -41,7 +41,9 @@ final class PiEstimator {
             }
         }
 
-        let pi = (6.0 / (x / Float(trials)))**0.5
+        x = x / Float(trials)
+        
+        let pi = (6.0 / x)**0.5
         print("Estimate of Pi is:",pi)
     }
     
